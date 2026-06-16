@@ -53,6 +53,21 @@ header {
     transition: all .9s;
 }
 
+.btn-remove {
+    width: 120px;
+    height: 40px;
+    background-color: var(--erro);
+    color: var(--main-text);
+    border-radius: 8px;
+    transition: all .9s;
+    margin-left: 10px;
+}
+
+.btn-remove:hover {
+    background-color: #ec2727;
+    transform: scale(1.05);
+}
+
 .btn-add:hover,
 .btn-start:hover,
 .form-add button:hover {
@@ -148,6 +163,79 @@ main {
     transition: all .5s;
 }
 
+.model-remove {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-model {
+    position: relative;
+    width: 400px;
+    max-height: 600px;
+    height: auto;
+    overflow-y: auto;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    border-radius: 8px;
+}
+
+.box-model h1 {
+    text-align: center;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 20px;
+    background-color: transparent;
+    transition: all 0.5s;
+}
+
+.btn-close:hover {
+    color: var(--erro);
+}
+
+.box-model ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.line-model {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--secondary-text);
+}
+
+.line-model li {
+    flex: 1;
+    text-align: center;
+}
+
+.line-model button {
+    background-color: var(--erro);
+    color: var(--main-text);
+    padding: 5px 7px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.box-model p {
+    text-align: center;
+    margin-top: 30px;
+}
 
 
 /* Page Quest */
