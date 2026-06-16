@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #0F172A;
+    --main-text: #F8FAFC;
+    --secondary-text: #94A3B8;
+    --main-button: #3B82F6;
+    --hover-button: #2563EB;
+    --success: #22C55E;
+    --erro: #EF4444;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-text);
+}
+
+body {
+    min-height: 100vh;
+    background-color: #0F172A;
+    color: var(--main-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid var(--main-button);
+    padding: 10px;
+}
+
+.header-home {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn-add {
+    width: 120px;
+    height: 40px;
+    background-color: var(--main-button);
+    color: var(--main-text);
+    border-radius: 8px;
+    transition: all .9s;
+}
+
+.btn-add:hover,
+.btn-start:hover,
+.form-add button:hover {
+    background-color: var(--hover-button);
+    transform: scale(1.05);
+}
+
+main {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-home {
+    width: 400px;
+    height: 400px;
+    border: 1px solid var(--main-button);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50%;
+}
+
+.title {
+    max-width: 300px;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.btn-start {
+    margin-top: 20px;
+    background-color: var(--main-button);
+    border-radius: 8px;
+    transition: all .9s;
+}
+
+.btn-start a {
+    padding: 10px 40px;
+    display: block;
+}
+
+.model-add {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-add {
+    width: 400px;
+    background-color: white;
+    padding: 40px 15px;
+    border-radius: 4px;
+}
+
+.form-add h3 {
+    text-align: center;
+    color: var(--background);
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.form-add input {
+    display: block;
+    margin: 15px auto 0;
+    width: 70%;
+    height: 30px;
+    border: 1px solid var(--secondary-text);
+    border-radius: 4px;
+    outline: none;
+    padding: 0 6px;
+}
+
+.form-add button {
+    margin: 20px auto 0;
+    display: block;
+    padding: 6px 50px;
+    background-color: var(--main-button);
+    color: var(--main-text);
+    border-radius: 4px;
+    transition: all .5s;
+}
+
+
+
+/* Page Quest */
+
+.header-quest {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-link-quest {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s;
+}
+
+.btn-refresh {
+    background-color: transparent;
+    color: var(--main-text);
+    transition: all 0.3s;
+}
+
+.btn-link-quest:hover,
+.btn-refresh:hover {
+    color: var(--hover-button);
+    transform: scale(1.05);
+}
+
+.section-quest {
+    width: 400px;
+    border: 1px solid var(--main-button);
+    border-radius: 4px;
+    padding: 70px 10px;
+}
+
+.label-quest {
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.input-quest {
+    display: block;
+    width: 90%;
+    height: 40px;
+    margin: 50px auto 30px;
+    border: 1px solid var(--main-button);
+    background-color: var(--background);
+    color: var(--main-text);
+    outline: none;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+.btn-next {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 60px;
+    background-color: var(--main-button);
+    color: var(--main-text);
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn-next:hover {
+    background-color: var(--hover-button);
+}
+
+/* Parte final do quest */
+
+.resumo-quests {
+    margin: 40px 0;
+}
+
+.box {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--main-button);
+    padding: 10px 15px;
+}
+
+.box p {
+    text-transform: capitalize;
+}
+
+.box-resposta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.box-resposta svg {
+    color: var(--success);
+}
+
+.box-resposta2 svg {
+    color: var(--erro);
+}
+
+.box-resposta span {
+    font-size: 14px;
+    color: var(--secondary-text);
+}
+
+
+
