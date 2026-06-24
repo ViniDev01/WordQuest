@@ -1,3 +1,5 @@
+const main = document.querySelector("main")
+const section = document.querySelector(".section-quest");
 const label = document.querySelector(".label-quest");
 const input = document.getElementById("input-palavra");
 const button = document.querySelector(".btn-next");
@@ -37,8 +39,54 @@ button.addEventListener("click", () => {
 
     if(currentIndex >= words.length) {
         alert("Fim do jogo");
-        button.disabled = true;
-        input.disabled = true;
+        section.style.display = "none";
+        const sectionResumo = document.createElement("SECTION");
+        sectionResumo.classList.add("resumo-quests");
+        sectionResumo.innerHTML = `
+            <h1 class="title-resumo">Confira quais você <span>acertou</span> ou <span>erro</span></h1>
+            ${allCorrectAnswer.map(item => `
+                <div class="box success">
+                    <div class="box-header">
+                        <span class="status">✓ Correta</span>
+                    </div>
+
+                    <div class="question">
+                        <strong>Pergunta</strong>
+                        <p>${item.wrongAnswers}</p>
+                    </div>
+
+                    <div class="answer">
+                        <strong>Sua resposta</strong>
+                        <p>${item.answer}</p>
+                    </div>
+                </div>
+            `).join("")}
+
+            ${allTheWrongAnswers.map(item => `
+                <div class="box error">
+                    <div class="box-header">
+                        <span class="status">✕ Incorreta</span>
+                    </div>
+
+                    <div class="question">
+                        <strong>Pergunta</strong>
+                        <p>${item.wrongAnswers}</p>
+                    </div>
+
+                    <div class="answer">
+                        <strong>Sua resposta</strong>
+                        <p>${item.answer}</p>
+                    </div>
+
+                    <div class="correct-answer">
+                        <strong>Resposta correta</strong>
+                        <p>${item.correctAnswer}</p>
+                    </div>
+                </div>
+            `).join("")}
+            
+        `
+        main.appendChild(sectionResumo);
         return;
     }
 

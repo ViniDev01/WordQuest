@@ -309,39 +309,86 @@ main {
 /* Parte final do quest */
 
 .resumo-quests {
+    padding: 0 2%;
     margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.title-resumo {
+    text-align: center;
 }
 
 .box {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid var(--main-button);
-    padding: 10px 15px;
+    background: var(--secondary-background);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    transition: .2s ease;
 }
 
-.box p {
-    text-transform: capitalize;
+.box:hover {
+    transform: translateY(-2px);
 }
 
-.box-resposta {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+.success {
+    border-left: 5px solid var(--success);
 }
 
-.box-resposta svg {
+.error {
+    border-left: 5px solid var(--erro);
+}
+
+.box-header {
+    margin-bottom: 14px;
+}
+
+.status {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+
+.success .status {
+    background: rgba(34, 197, 94, .15);
     color: var(--success);
 }
 
-.box-resposta2 svg {
+.error .status {
+    background: rgba(239, 68, 68, .15);
     color: var(--erro);
 }
 
-.box-resposta span {
+.question,
+.answer,
+.correct-answer {
+    margin-top: 12px;
+}
+
+.question strong,
+.answer strong,
+.correct-answer strong {
+    display: block;
     font-size: 14px;
     color: var(--secondary-text);
+    margin-bottom: 4px;
+}
+
+.question p,
+.answer p,
+.correct-answer p {
+    margin: 0;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+.correct-answer {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(34, 197, 94, .08);
 }
 
 
