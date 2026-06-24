@@ -16,6 +16,12 @@ let allCorrectAnswer = [];
 let allTheWrongAnswers = [];
 label.textContent = words[currentIndex].english;
 
+// Função para o botão funcionar com o Enter
+input.addEventListener("keydown", (e) => {
+    if(e.key === "Enter") {
+        button.click();
+    }
+})
 button.addEventListener("click", () => {
     const answer = input.value.trim().toLowerCase();
     const correctAnswer = words[currentIndex].portugues.toLowerCase();
